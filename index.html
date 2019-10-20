@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Heesoo-mug</title>
-   </head>
-   <body>
-      test
-      <a href="./img/test.usdz" rel="ar" >
-         <img src="./img/test.jpg">
+<head>
+   <meta charset="utf-8">
+   <title>Heesoo-mug</title>
+   <meta name="viewport" content="width=device-width">
+</head>
+<body>
+   <container>
+      <p>&#9660; Tap the image &#9660;</p>
+      <a href="./img/head.usdz" rel="ar" class="ar-link">
+         <img src="./img/heesoo-mask.png">
       </a>
-   </body>
+      <p>&#9650; Safari on iOS 12 is required &#9650;</p>
+   </container>
+
+   <style>
+   body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+
+   }
+
+   p {
+      color: #fff;
+      font-size: 20px;
+   }
+
+   @media screen and (max-width: 500px) {
+      p {
+         font-size: 14px;
+      }
+   }
+
+   .container {
+      width: 100%;
+   }
+
+   .ar-link {
+      display: block;
+      margin: auto;
+      width: 90%;
+      margin: 60px auto 0 auto;
+      max-width: 500px;
+   }
+
+   img {
+      width: 100%;
+   }
+
+   img:hover{
+      animation: rumble 0.12s linear infinite;
+   }
+
+   @keyframes rumble{
+      0%	{transform:rotate(0deg)	translate(0,0);}
+      12.5%	{transform:rotate(0.4deg)	translate(1px,-1px);}
+      25%	{transform:rotate(0.8deg)	translate(0px,1px);}
+      37.5%	{transform:rotate(0.4deg)	translate(-1px,0);}
+      50%	{transform:rotate(0deg)	translate(0,0);}
+      62.5%	{transform:rotate(-0.4deg)	translate(1px,0);}
+      75%	{transform:rotate(-0.8deg)	translate(0,1px);}
+      87.5%	{transform:rotate(-0.4deg)	translate(-1px,-1px);}
+      100%	{transform:rotate(0deg)	translate(0,0);}
+   }
+   </style>
+</body>
 </html>
