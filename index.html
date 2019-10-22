@@ -25,7 +25,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       width: 100%;
 
    }
@@ -78,10 +77,13 @@
 // スマートフォンで全画面表示
 $(function() {
    var hSize = $(window).height();
-   $('body').height(hSize); // アドレスバーを除いたサイズを付与
+   $('.top').height(hSize); // アドレスバーを除いたサイズを付与
 
-   const host = window.location.hostname;
+});
 
+$(window).resize(function() { // ページをリサイズした時の処理
+   var hSize = $(window).height();
+   $('.top').height(hSize); // アドレスバーを除いたサイズを付与
 });
 
 
